@@ -269,14 +269,23 @@ int nthFromEnd2(linkdlst* head){
     
 }
 
+
 void Reverse(linkdlst** head){
+    
     linkdlst* current = *head;
     linkdlst* prev = NULL;
     linkdlst* nextnode = NULL;
     
+    while(current != NULL){
+        nextnode = current->next;
+        current->next = prev;
+        prev = current;
+        current = nextnode;
+    }
     
-    
+    *head = prev;
 }
+
 
 //number of times a given int occurs 
 int no_of_times(linkdlst* head,int x){
