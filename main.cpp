@@ -1,6 +1,5 @@
 #include <iostream>
 #include <assert.h>
-#include <math.h>
 
 using namespace std;
 
