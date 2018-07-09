@@ -44,7 +44,7 @@ void InsertAfter(linkdlst* prevNode,int data){
     
 }
 
-void Append(linkdlst**head_ref,int data){
+void Append(linkdlst** head_ref,int data){
     
     linkdlst* last = *head_ref;
     
@@ -116,8 +116,9 @@ void deletePos(linkdlst** head_ref,int pos){
         return;
     }
     
-    temp->next = temp->next->next;
+    Node* temp2 = temp->next->next;
     delete temp->next;
+    temp->next = temp2;
     
 }
 
